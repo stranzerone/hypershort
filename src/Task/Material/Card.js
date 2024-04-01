@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { Card, Button, Dropdown, Modal } from 'react-bootstrap';
+import { Card, Button, Dropdown } from 'react-bootstrap';
 import "./TaskCard.css";
-import { updateTaskPriority } from '../../Redux/TaskSlice';
+import { updateTaskPriority, deleteTask } from '../../Redux/TaskSlice'; // Import deleteTask action
 import UpdatePage from '../Pages/UpdatePage';
 
 const TaskCard = ({ tasks }) => {
@@ -17,7 +17,10 @@ const TaskCard = ({ tasks }) => {
   const handleUpdateClick = (task) => {
     setSelectedTask(task);
     setUpdateModalShow(true);
-    console.log(task)
+  };
+
+  const handleDeleteClick = (taskId) => { // Add this function to handle task deletion
+    dispatch(deleteTask(taskId)); // Dispatch deleteTask action
   };
 
   return (
@@ -50,8 +53,8 @@ const TaskCard = ({ tasks }) => {
                
                   </Dropdown.Toggle>
                   <Dropdown.Menu>
-                    <Dropdown.Item onClick={() => handleUpdateClick(task.id)}>Update</Dropdown.Item>
-                    <Dropdown.Item >Delete</Dropdown.Item>
+                    <Dropdown.Item onClick={() => handleUpdateClick(task)}>Update</Dropdown.Item>
+                    <Dropdown.Item onClick={() => handleDeleteClick(task.id)}>Delete</Dropdown.Item> {/* Add onClick handler for Delete */}
                   </Dropdown.Menu>
                 </Dropdown>
               </div>
