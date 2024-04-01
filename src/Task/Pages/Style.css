@@ -1,0 +1,145 @@
+.dashboard-container {
+    width: 150vw;
+    overflow-x: auto; /* Enable horizontal scrolling if needed */
+    display: flex;
+   
+    padding-top: 5rem;
+    gap: 1rem;
+  }
+  
+  .dashboard-column{
+
+
+display: flex;
+flex-direction: column;
+align-items: center;
+
+
+
+
+  }
+  .dashBoardHeading{
+    display: flex;
+  
+justify-content: start;
+
+  }
+
+  .personIcon{
+
+    display: flex;
+    justify-content: end;
+  
+  }
+  
+  .icon{
+background-color: rgb(227, 220, 220);
+border-radius: 50%;
+
+
+  }
+  .Heading{
+  
+   color: white;
+font-weight: 800;
+  
+ height: 4rem;
+ border-radius: 1rem;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+
+  }
+
+
+
+
+  .filter-container {
+    display: flex;
+    flex-direction: column;
+ 
+    border: 2px solid black;
+    
+  }
+  
+
+  .filter-container2{
+    border: 2px solid gray;
+    border-radius: 1rem;
+    background-color: rgba(255, 255, 255, 0.516);
+  }
+  .filter-options {
+    display: flex;
+    height: 13vh;
+align-items: center;
+padding-left: 1rem;
+
+    gap: 2rem;
+  }
+
+
+  .filter-options h3{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    
+  }
+  
+  .filter-input {
+    margin-bottom: 15px;
+  }
+  
+  .filter-input label {
+    margin-right: 10px;
+  }
+  
+  .filter-input input,
+  .filter-input select {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .filter-input input[type="date"] {
+    width: 170px;
+  }
+  
+  .content {
+    flex-grow: 1;
+    overflow-y: auto;
+   
+  }
+  
+
+  /*Add New Page*/
+
+  /* TaskForm.css */
+
+.custom-modal {
+  font-family: 'Arial', sans-serif;
+}
+
+.modal-header {
+  background-color: #007bff;
+  color: white;
+  border-bottom: none;
+}
+
+.modal-body .form-group {
+  margin-bottom: 20px;
+}
+
+.form-control {
+  border-radius: 4px;
+  border-color: #ced4da;
+}
+
+.submit-btn {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.submit-btn:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}
