@@ -53,7 +53,7 @@ const TaskCard = ({ tasks }) => {
                
                   </Dropdown.Toggle>
                   <Dropdown.Menu>
-                    <Dropdown.Item onClick={() => handleUpdateClick(task)}>Update</Dropdown.Item>
+                    <Dropdown.Item onClick={() => handleUpdateClick(task.id)}>Update</Dropdown.Item>
                     <Dropdown.Item onClick={() => handleDeleteClick(task.id)}>Delete</Dropdown.Item> {/* Add onClick handler for Delete */}
                   </Dropdown.Menu>
                 </Dropdown>

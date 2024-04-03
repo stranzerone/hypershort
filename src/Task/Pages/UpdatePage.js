@@ -17,7 +17,7 @@ const UpdatePage = ({ show, onHide, ids }) => {
   });
 
   useEffect(() => {
-    const task = tasks.find((task) => task.id === parseInt(ids));
+    const task = tasks.find((task) => task.id == ids);
     if (task) {
       setFormData({
         title: task.title,
@@ -65,7 +65,7 @@ const UpdatePage = ({ show, onHide, ids }) => {
 
           <Form.Group>
             <Form.Label>Assignee</Form.Label>
-            <Form.Control plaintext readOnly defaultValue={`@${formData.assignee}`} />
+            <Form.Control plaintext readOnly defaultValue={formData.assignee} />
           </Form.Group>
 
           <Form.Group>
